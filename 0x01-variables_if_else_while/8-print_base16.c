@@ -14,16 +14,16 @@ int main(void)
 
 char base16;
 int base10;
-base10 = 0;
-base16 = 'A';
+
 
 for (base10 = '0'; base10 <= '9'; base10++)
 {
 putchar(base10);
 }
 
+base16 = 'a';
 
-while (base16 <= 'F')
+while (base16 <= 'f')
 {
 putchar(base16);
 base16++;
