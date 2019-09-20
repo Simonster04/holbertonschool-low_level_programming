@@ -28,11 +28,10 @@ putchar(j);
 putchar(' ');
 putchar(h);
 putchar(w);
-if ((i + j) > (h + w))
+if ((i + j) >= (h + w))
 {}
 else if (i == '9' && j == '8' && h == '9' && w == '9')
-{
-}
+{}
 else
 {
 putchar(',');
