@@ -17,7 +17,7 @@ if (c < 0)
 c = c * -1;
 }
 
-_putchar('0'+c);
+_putchar('0' + c);
 
 return (c);
 
