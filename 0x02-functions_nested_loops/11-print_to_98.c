@@ -33,7 +33,7 @@ if (n <= y)
 }
 else
 {
-	for (j = n; j > y; j--)
+	for (j = n; j >= y; j--)
 	{
 		if (j != y)
 		{
