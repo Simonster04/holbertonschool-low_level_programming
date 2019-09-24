@@ -11,8 +11,10 @@
 void jack_bauer(void)
 {
 
-int x, y, z, w;
+int i, x, y, z, w;
 
+for (i = '0'; i <= '1'; i++)
+{
 for (x = '0'; x <= '2'; x++)
 {
 	for (y = '0'; y <= '3'; y++)
@@ -31,6 +33,6 @@ for (x = '0'; x <= '2'; x++)
 		}
 	}
 }
-
-
+}
+return;
 }
