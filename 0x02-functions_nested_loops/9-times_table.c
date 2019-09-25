@@ -10,42 +10,41 @@
 
 void times_table(void)
 {
-
 int x = 0;
 int y = 0;
 int mult;
-
 for (x = 0; x <= 9; x++)
 {
 	for (y = 0; y <= 9; y++)
 	{
 	mult = y * x;
-
 		if (mult >= 10)
 		{
+		_putchar(',');
 		_putchar(' ');
 		_putchar((mult / 10) + '0');
 		_putchar((mult % 10) + '0');
-
-			if (y != 9)
-			{
-			_putchar(',');
-			}
-		}
-		else if (mult > 0 && mult <= 9)
-		{
-		_putchar(' ');
-		_putchar(' ');
-		_putchar(mult + '0');
-
-			if (y != 9)
-			{
-			_putchar(',');
-			}
 		}
 		else
 		{
-		_putchar(mult + '0');
+			if (mult != 0)
+			{
+			_putchar(',');
+			_putchar(' ');
+			_putchar(' ');
+			_putchar(mult + '0');
+			}
+			else if (y != 0)
+			{
+			_putchar(',');
+			_putchar(' ');
+			_putchar(' ');
+			_putchar(mult + '0');
+			}
+			else
+			{
+			_putchar(mult + '0');
+			}
 		}
 	}
 	_putchar('\n');
