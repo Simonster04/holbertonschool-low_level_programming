@@ -23,25 +23,29 @@ for (x = 0; x <= 9; x++)
 
 		if (mult >= 10)
 		{
+		_putchar(' ');
 		_putchar((mult / 10) + '0');
 		_putchar((mult % 10) + '0');
 
 			if (y != 9)
 			{
 			_putchar(',');
-			_putchar(' ');
 			}
 		}
-		else
+		else if (mult > 0 && mult <= 9)
 		{
+		_putchar(' ');
+		_putchar(' ');
 		_putchar(mult + '0');
 
 			if (y != 9)
 			{
 			_putchar(',');
-			_putchar(' ');
-			_putchar(' ');
 			}
+		}
+		else
+		{
+		_putchar(mult + '0');
 		}
 	}
 	_putchar('\n');
