@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _putchar - writes the character c to stdout
+ * print_triangle - prints a triangle, followed by a new line
  * @size: The character to print
  *
  * Return: On success 1.
