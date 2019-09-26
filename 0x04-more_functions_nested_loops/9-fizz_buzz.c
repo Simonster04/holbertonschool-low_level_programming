@@ -25,7 +25,14 @@ for (x = 1; x <= 100; x++)
 	}
 	else if ((x % 5) == 0)
 	{
-	printf("Buzz ");
+		if (x != 100)
+		{
+		printf("Buzz ");
+		}
+		else
+		{
+		printf("Buzz");
+		}
 	}
 	else
 	{
