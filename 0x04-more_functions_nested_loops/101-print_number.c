@@ -37,6 +37,6 @@ else if (n >= 100 && n < 1000)
 				n = n * -1;
 				_putchar('-');
 				_putchar((n / 10) + '0');
-                		_putchar((n % 10) + '0');
+				_putchar((n % 10) + '0');
 				}
 }
