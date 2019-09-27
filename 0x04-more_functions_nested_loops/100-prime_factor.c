@@ -15,7 +15,7 @@ long int n = 612852475143;
 long int div = 2;
 long int max;
 
-while (n != 0)
+while (n < (n / 2))
 {
 	if ((n % div) != 0)
 	{
