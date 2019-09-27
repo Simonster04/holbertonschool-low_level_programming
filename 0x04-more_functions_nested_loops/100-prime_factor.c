@@ -16,7 +16,7 @@ long int div = 2;
 long int max;
 long int a = 0;
 
-while (n != 0))
+while (n != 0
 {
 	if ((n % div) != 0)
 	{
