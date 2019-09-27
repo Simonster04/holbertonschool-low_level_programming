@@ -14,8 +14,9 @@ int main(void)
 long int n = 612852475143;
 long int div = 2;
 long int max;
+long int a = 0;
 
-while (n < (n / 2))
+while (n != 0))
 {
 	if ((n % div) != 0)
 	{
@@ -28,6 +29,7 @@ while (n < (n / 2))
 		if (n == 1)
 		{
 		printf("Largest factor: %ld\n", max);
+		a = 1;
 		break;
 		}
 	}
