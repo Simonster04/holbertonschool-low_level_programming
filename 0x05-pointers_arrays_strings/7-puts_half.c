@@ -28,9 +28,9 @@ if ((y % 2) == 0)
 else
 {
 for (x = ((y + 1) / 2); x < y; x++)
-        {
-        _putchar(str[x]);
-        }
+	{
+	_putchar(str[x]);
+	}
 
 }
 _putchar('\n');
