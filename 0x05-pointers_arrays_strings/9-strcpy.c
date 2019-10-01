@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _strcpy -  copies the string pointed to by src, including (\0), to the buffer pointed to by dest
+ * _strcpy - copy the string pointed to by src to the buffer pointed to by dest
  * @src: char pointer
  * @dest: char pointer
  * Return: No return.
@@ -23,6 +23,6 @@ for (x = 0; x <= j; x++)
 {
 dest[x] = src[x];
 }
-return(dest);
+return (dest);
 
 }
