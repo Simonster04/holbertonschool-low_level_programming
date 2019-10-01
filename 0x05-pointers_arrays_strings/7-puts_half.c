@@ -9,6 +9,24 @@
 
 void puts_half(char *str)
 {
-x = 
+
+int y = 0;
+int x;
+
+while (str[y] != '\0')
+{
+y += 1;
+}
+
+
+for (x = (y / 2); x < y; x++)
+{
+
+_putchar(str[x]);
+}
+
+_putchar('\n');
+
+
 }
 
