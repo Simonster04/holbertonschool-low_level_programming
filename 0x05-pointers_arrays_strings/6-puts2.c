@@ -13,10 +13,10 @@ int x = 0;
 
 while (*str != '\0')
 {
-if ((str[x] % 2) == 0)
-{
-_putchar(str[x]);
-}
+	if ((str[x] % 2) == 0)
+	{
+	_putchar(str[x]);
+	}
 str++;
 }
 _putchar('\n');
