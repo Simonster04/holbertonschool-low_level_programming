@@ -1,0 +1,14 @@
+#include "holberton.h"
+
+/**
+ * puts_half - prints half of a string
+ * @str: pointer to print
+ *
+ * Return: no return.
+ */
+
+void puts_half(char *str)
+{
+x = 
+}
+
