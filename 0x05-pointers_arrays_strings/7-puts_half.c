@@ -18,13 +18,21 @@ while (str[y] != '\0')
 y += 1;
 }
 
-
-for (x = (y / 2); x < y; x++)
+if ((y % 2) == 0)
 {
-
-_putchar(str[x]);
+	for (x = (y / 2); x < y; x++)
+	{
+	_putchar(str[x]);
+	}
 }
+else
+{
+for (x = ((y + 1) / 2); x < y; x++)
+        {
+        _putchar(str[x]);
+        }
 
+}
 _putchar('\n');
 
 
