@@ -18,7 +18,7 @@ y += 1;
 }
 
 
-for(x = 0; x < y; x++)
+for (x = 0; x < y; x++)
 {
 
 _putchar(str[x]);
