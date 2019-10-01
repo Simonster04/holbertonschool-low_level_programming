@@ -13,15 +13,15 @@ void print_rev(char *s)
 int x;
 int y = 0;
 
-while (*s != '\0')
+while (s[y] != '\0')
 {
 y += 1;
-s++;
 }
 
-for (x = y; x >= 0; x--)
+
+for (x = (y - 1); x >= 0; x--)
 {
-_putchar(s[(x - 1)]);
+_putchar(s[x]);
 }
 _putchar('\n');
 }

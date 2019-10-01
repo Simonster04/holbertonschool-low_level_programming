@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <string.h>
 
 /**
  * puts2 - prints every other char of a string, starting with the first char
@@ -13,9 +14,10 @@ int x = 0;
 
 while (*str != '\0')
 {
-	if ((str[x] % 2) == 0)
+	for(int i = 0; i < strlen(p); i+=2)
 	{
-	_putchar(str[x]);
+	putchar(p[i]);
+	s[i/2]=p[i];
 	}
 str++;
 }
