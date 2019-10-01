@@ -11,9 +11,15 @@ void rev_string(char *s)
 {
 
 int x, y;
-int j = 8;
+int j = 0;
 
-for (x = 0; x <= j; x++)
+
+while (s[j] != '\0')
+{
+j += 1;
+}
+
+for (x = 0; x <= (j - 1); x++)
 {
 
 y = s[x];

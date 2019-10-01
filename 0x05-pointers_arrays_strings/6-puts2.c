@@ -10,17 +10,23 @@
 
 void puts2(char *str)
 {
-int x = 0;
+int x;
+int y = 0;
+char i[32];
 
-while (*str != '\0')
+while (str[y] != '\0')
 {
-	for(int i = 0; i < strlen(p); i+=2)
-	{
-	putchar(p[i]);
-	s[i/2]=p[i];
-	}
-str++;
+y += 1;
 }
+
+
+for(x = 0; x < y; x+=2)
+{
+
+i[x/2]=str[x];
+_putchar(i[x/2]);
+}
+
 _putchar('\n');
 }
 
