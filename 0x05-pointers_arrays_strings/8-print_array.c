@@ -12,11 +12,12 @@ void print_array(int *a, int n)
 {
 
 int x;
-n = 0;
+int j = 0;
 
-while (a[n] != '\0')
+while (a[j] != '\0')
 {
-n += 1;
+n = j + 1;
+j++;
 }
 
 
