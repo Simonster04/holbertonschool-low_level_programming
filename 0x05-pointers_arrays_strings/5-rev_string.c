@@ -10,23 +10,29 @@
 void rev_string(char *s)
 {
 
-int x, y;
+int x, y, f;
 int j = 0;
-
 
 while (s[j] != '\0')
 {
 j += 1;
 }
 
-for (x = 0; x <= (j - 1); x++)
+
+for (x = 0; x < (j - 1); x++)
+{
+f++;
+
+}
+
+for (x = 0; x < (j / 2); x++)
 {
 
 y = s[x];
-s[x] = s[j];
-s[j] = y;
+s[x] = s[f];
+s[f] = y;
 
-j--;
+f--;
 
 }
 
