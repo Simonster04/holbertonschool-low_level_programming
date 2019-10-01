@@ -12,24 +12,26 @@ void print_array(int *a, int n)
 {
 
 int x;
-int j = 0;
+int cont;
 
-while (a[j] != '\0')
+while (a[n] != '\0')
 {
-n = j + 1;
-j++;
+n += 1;
 }
 
+cont = n - 1;
 
-for (x = 0; x < (n - 1); x++)
+for (x = 0; x < cont; x++)
 {
 
-printf("%d", a[x]);
-if (x < (n - 2))
+if (x < (cont - 1))
 {
-printf(", ");
+printf("%d, ", a[x]);
+}
+else
+{
+printf("%d\n", a[x]);
+}
 
 }
-}
-printf("\n");
 }
