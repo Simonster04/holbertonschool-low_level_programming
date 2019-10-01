@@ -21,9 +21,8 @@ if (x < (n - 1))
 {
 printf(", ");
 }
-else
-{
+}
+
 printf("\n");
-}
-}
+
 }
