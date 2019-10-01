@@ -11,7 +11,6 @@ void puts2(char *str)
 {
 int x;
 int y = 0;
-int n;
 
 while (str[y] != '\0')
 {
@@ -19,13 +18,11 @@ y += 1;
 }
 
 
-for(x = 0; x < y; x+=2)
+for(x = 0; x < y; x++)
 {
 
-n = str[x];
-str[x/2] = n;
-_putchar(*str);
-
+_putchar(str[x]);
+x++;
 }
 
 _putchar('\n');
