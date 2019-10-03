@@ -22,5 +22,8 @@ for (i = 0; src[i] != '\0'; i++)
 {
 dest[c + i] = src[i];
 }
+
+dest[c + i] = '\0';
+
 return (dest);
 }
