@@ -18,8 +18,8 @@ for (i = 0; i <= x; i++)
 {
 
 tmp = a[i];
-a[i] = a[x];
-a[x] = tmp;
+a[i] = a[x - 1];
+a[x - 1] = tmp;
 
 x--;
 
