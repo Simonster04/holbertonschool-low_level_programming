@@ -20,7 +20,7 @@ c += 1;
 
 for (i = 0; src[i] != '\0'; i++)
 {
-dest[c+i] = src[i];
+dest[c + i] = src[i];
 }
-return(dest);
+return (dest);
 }
