@@ -1,9 +1,10 @@
 #include "holberton.h"
 
 /**
- * _strcat - returns the length of a string
+ * _strncat - concatenates two strings, n bytes
  * @src: source array
  * @dest: destination array
+ * @n: amount of bytes
  * Return: 0.
  */
 
