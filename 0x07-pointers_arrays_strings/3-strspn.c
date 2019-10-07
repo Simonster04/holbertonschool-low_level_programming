@@ -14,7 +14,14 @@ unsigned int _strspn(char *s, char *accept)
 int x, y;
 unsigned int cont;
 
-for (x = 0; s[x] != '\0' && s < accept; x++)
+for (x = 0; s[x] != '\0'; x++)
+{
+
+if (s[x] == ',')
+{
+break;
+}
+else
 {
 
 	for (y = 0; accept[y] != '\0'; y++)
@@ -23,10 +30,13 @@ for (x = 0; s[x] != '\0' && s < accept; x++)
 		{
 		cont++;
 		}
-
+		else
+		{
+		continue;
+		}
 	}
 }
-
+}
 return (cont);
 }
 
