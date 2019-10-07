@@ -23,13 +23,13 @@ for (x = 0; haystack[x] != '\0'; x++)
 		{
 			if (needle[y] == '\0')
 			{
-			return (needle);
+			return (&haystack[x]);
 			}
 			y++;
 		}
 		if (needle[y] == '\0')
 		{
-		return (needle);
+		return (&haystack[x]);
 		}
 	}
 
