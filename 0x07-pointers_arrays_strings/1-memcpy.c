@@ -1,6 +1,6 @@
 #include "holberton.h"
 
-/*
+/**
  * _memcpy - copies memory area
  * @src: pointer to array source
  * @dest: pointer to array destiny
