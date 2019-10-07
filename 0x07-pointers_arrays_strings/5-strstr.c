@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "holberton.h"
 
 /**
@@ -36,6 +35,6 @@ for (x = 0; haystack[x] != '\0'; x++)
 
 }
 
-return (NULL);
+return ('\0');
 
 }
