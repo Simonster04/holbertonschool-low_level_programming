@@ -14,7 +14,7 @@ unsigned int _strspn(char *s, char *accept)
 int x, y;
 unsigned int cont;
 
-for (x = 0; s[x] != '\0'; x++)
+for (x = 0; s[x]; x++)
 {
 
 if (s[x] == ',')
