@@ -2,8 +2,8 @@
 
 /**
  * set_string - prints the chessboard
- * @s: array
- * @to: string
+ * @*s: array
+ * @to: char
  * Return: 0.
  */
 
