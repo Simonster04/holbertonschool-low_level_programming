@@ -1,9 +1,10 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
- * _strspn - gets the length of a prefix substring
- * @s: source array
- * @accept: destination array
+ * print_diagsums - gets the length of a prefix substring
+ * @a: source array
+ * @size: destination array
  *
  * Return: 0.
  */
@@ -13,16 +14,27 @@ void print_diagsums(int *a, int size)
 
 int x, y, sumd1, sumd2;
 
-for (x = 0, y = 0; x < size && j < size; x++, y++)
+sumd1 = 0;
+sumd2 = 0;
+
+for (x = 0; x < size; x++)
 {
-sumd1 += a[i][j];
+	for (y = 0; y < size; y++)
+	{
+	if (x == y)
+	{
+	sumd1 = sumd1 + a[x + y];
+	}
+	}
 }
 
-for(x = 0, y = (size - 1); x < size && y >= 0; x++, y--)
+
+for (x = 0; x < size && y >= 0; x++)
 {
-sumd2 += a[i][j];
+sumd2 = sumd2 + a;
+y--;
 }
 
-
+printf("%d, %d\n", sumd1, sumd2);
 
 }
