@@ -2,37 +2,31 @@
 #include <stdio.h>
 
 /**
- * print_diagsums - gets the length of a prefix substring
+ * print_diagsums - print sum of diag and invers diag
  * @a: source array
- * @size: destination array
+ * @size: lenght of array per row
  *
- * Return: 0.
+ * Return: void.
  */
 
 void print_diagsums(int *a, int size)
 {
 
-int x, y, sumd1, sumd2;
+int x, sumd1, sumd2;
 
-sumd1 = 0;
+sumd1 = a[0];
 sumd2 = 0;
 
-for (x = 0; x < size; x++)
+for (x = 0; x < (size * size); x++)
 {
-	for (y = 0; y < size; y++)
-	{
-	if (x == y)
-	{
-	sumd1 = sumd1 + a[x + y];
-	}
-	}
+	sumd1 = sumd1 + a[x];
+	x = x + size;
 }
 
-
-for (x = 0; x < size && y >= 0; x++)
+for (x = size - 1; x <= ((size * size) - size); x++)
 {
-sumd2 = sumd2 + a[x + y];
-y--;
+	sumd2 = sumd2 + a[x];
+	x = x + size - 2;
 }
 
 printf("%d, %d\n", sumd1, sumd2);
