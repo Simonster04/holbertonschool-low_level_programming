@@ -31,7 +31,7 @@ for (x = 0; x < size; x++)
 
 for (x = 0; x < size && y >= 0; x++)
 {
-sumd2 = sumd2 + a;
+sumd2 = sumd2 + a[x + y];
 y--;
 }
 
