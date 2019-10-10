@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
- * prime_calculation - returns 1 if the input is prime number
+ * prime_calculation - determine if it is a prime number
  * @n: number
  * @i: iterator
- * Return: 1 success, 0 not success.
+ * Return: 1 success.
  */
 
 int prime_calculation(int n, int i)
@@ -30,9 +30,9 @@ return (1);
 
 
 /**
- * _is_prime_number - returns 1 if the input is prime number
+ * _is_prime_number - determine if it is prime number
  * @n: number
- * Return: 1 success, 0 not success.
+ * Return: 1 success.
  */
 
 int is_prime_number(int n)
