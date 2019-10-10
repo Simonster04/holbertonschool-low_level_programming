@@ -30,7 +30,7 @@ return (1);
 
 
 /**
- * _is_prime_number - determine if it is prime number
+ * is_prime_number - determine if it is prime number
  * @n: number
  * Return: 1 success.
  */
