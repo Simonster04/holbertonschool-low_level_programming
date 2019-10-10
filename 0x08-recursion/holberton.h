@@ -1,3 +1,4 @@
+int wildcmp(char *s1, char *s2);
 void _puts_recursion(char *s);
 int _putchar(char c);
 void _print_rev_recursion(char *s);
@@ -9,3 +10,5 @@ int _sqrt_calculation(int n, int i);
 int is_prime_number(int n);
 int is_palindrome(char *s);
 int palindrome_calculation(char *s, int i, int n);
+int wildcmp(char *s1, char *s2);
+
