@@ -1,14 +1,13 @@
 #include "holberton.h"
 
 /**
- * _atoi - test for Static Libraries project
+ * _atoi - checks for uppercase character
  * @s: string
  *
- * Return: On success 1.
+ * Return: 0.
  */
 
 int _atoi(char *s)
 {
-
 return (0);
 }
