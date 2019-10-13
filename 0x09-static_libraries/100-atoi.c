@@ -6,6 +6,7 @@
  */
 int _atoi(char *s)
 {
+
 	short boolean;
 	int i, minus, result;
 
