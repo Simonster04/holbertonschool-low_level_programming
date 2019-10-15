@@ -26,11 +26,6 @@ while (str[c] != '\0')
 c++;
 }
 
-if (c == 0)
-{
-return (NULL);
-}
-
 fifi = malloc(sizeof(char) * c);
 
 for (i = 0; str[i] != '\0'; i++)
