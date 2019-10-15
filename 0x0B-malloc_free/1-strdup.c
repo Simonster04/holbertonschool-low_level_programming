@@ -12,13 +12,15 @@
 char *_strdup(char *str)
 {
 
-char *fifi = NULL;
-int i;
-int c = 0;
+char *fifi;
+fifi = NULL;
+unsigned int i;
+unsigned int c = 0;
 
 if (str == NULL)
+{
 	return (NULL);
-
+}
 
 while (str[c] != '\0')
 {
