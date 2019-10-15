@@ -29,7 +29,7 @@ d += 1;
 }
 
 
-fifi = malloc((c + d) * sizeof(char));
+fifi = malloc((c + d)*sizeof(char));
 
 
 for (i = 0; s1[i] != '\0'; i++)
