@@ -17,29 +17,28 @@ int i;
 int c = 0;
 
 if (str == NULL)
-{
-return (NULL);
-}
+	return (NULL);
+
 
 while (str[c] != '\0')
 {
-c++;
+	c++;
 }
 
 fifi = malloc(sizeof(char) * c);
 
 if (fifi == NULL)
 {
-return (NULL);
+	return (NULL);
 }
 
 for (i = 0; str[i] != '\0'; i++)
 {
-fifi[i] = str[i];
+	fifi[i] = str[i];
 }
 
 
 fifi[i] = '\0';
-
 return (fifi);
+
 }
