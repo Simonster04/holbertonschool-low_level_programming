@@ -17,7 +17,7 @@ unsigned int i;
 
 fifi = malloc(sizeof(char) * size);
 
-if (size == 0)
+if (size == 0 || fifi == NULL)
 {
 return (NULL);
 }
