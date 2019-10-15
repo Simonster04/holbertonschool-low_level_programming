@@ -13,31 +13,31 @@ char *str_concat(char *s1, char *s2)
 {
 
 char *fifi = NULL;
-int i;
-int c = 0;
+unsigned int i;
+unsigned int c = 0;
 
 while (s1[c] != '\0')
 {
-c += 1;
+	c += 1;
 }
 
-int d = 0;
+unsigned int d = 0;
 
 while (s2[d] != '\0')
 {
-d += 1;
+	d += 1;
 }
 
-fifi = malloc((c + d)*sizeof(char));
+fifi = malloc((c + d + 1)*sizeof(char));
 
 for (i = 0; s1[i] != '\0'; i++)
 {
-fifi[i] = s1[i];
+	fifi[i] = s1[i];
 }
 
 for (i = 0; s2[i] != '\0'; i++)
 {
-fifi[c + i] = s2[i];
+	fifi[c + i] = s2[i];
 }
 
 fifi[c + d] = '\0';
