@@ -13,7 +13,6 @@ char *_strdup(char *str)
 {
 
 char *fifi;
-fifi = NULL;
 unsigned int i;
 unsigned int c = 0;
 
@@ -27,8 +26,8 @@ while (str[c] != '\0')
 	c++;
 }
 
-fifi = malloc(sizeof(char) * c);
-
+fifi = NULL;
+fifi = malloc(sizeof(char) * (c + 1));
 if (fifi == NULL)
 {
 	return (NULL);

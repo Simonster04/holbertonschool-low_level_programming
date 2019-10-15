@@ -28,9 +28,7 @@ while (s2[d] != '\0')
 d += 1;
 }
 
-
 fifi = malloc((c + d)*sizeof(char));
-
 
 for (i = 0; s1[i] != '\0'; i++)
 {
