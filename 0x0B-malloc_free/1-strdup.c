@@ -32,5 +32,13 @@ for (i = 0; str[i] != '\0'; i++)
 {
 fifi[i] = str[i];
 }
+
+
+while (i < c)
+	{
+	fifi[i] = '\0';
+	i++;
+	}
+
 return (fifi);
 }
