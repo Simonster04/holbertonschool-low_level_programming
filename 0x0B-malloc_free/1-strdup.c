@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 /**
- * create_array - creates an array of chars and initializes it with a char
- * @size: amount of chars
- * @c: specific char
+ * _strdup - creates an array of chars and initializes it with a char
+ * @str: source array
+ *
  *
  * Return: &c
  */
@@ -16,14 +16,14 @@ char *fifi = NULL;
 int i;
 int c = 0;
 
-while (str[c] != '\0')
-{
-c++;
-}
-
 if (str == NULL)
 {
 return (NULL);
+}
+
+while (str[c] != '\0')
+{
+c++;
 }
 
 fifi = malloc(sizeof(char) * c);
