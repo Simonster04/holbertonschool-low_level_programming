@@ -28,17 +28,18 @@ c++;
 
 fifi = malloc(sizeof(char) * c);
 
+if (fifi == NULL)
+{
+return (NULL);
+}
+
 for (i = 0; str[i] != '\0'; i++)
 {
 fifi[i] = str[i];
 }
 
 
-while (i < c)
-	{
-	fifi[i] = '\0';
-	i++;
-	}
+fifi[i] = '\0';
 
 return (fifi);
 }
