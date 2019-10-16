@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 /**
- * str_concat - concatenates two strings
- * @s1: string
- * @s2: string
+ * alloc_grid -  pointer to a 2 dimensional array of integers
+ * @width: colums
+ * @height: rows
  *
- * Return: the pointer
+ * Return: the 2dimensional array
  */
 
 int **alloc_grid(int width, int height)
@@ -20,16 +20,17 @@ if (height <= 0 || width <= 0)
 	return (NULL);
 }
 
-x = (int **)malloc(height * sizeof(int*));
+x = (int **)malloc(height * sizeof(int *));
 
 if (x == NULL)
 {
-        return (NULL);
+	return (NULL);
 }
 
 for (i = 0; i < height; i++)
 {
-	x[i] = (int*)malloc(width * sizeof(int));
+	x[i] = (int *)malloc(width * sizeof(int));
+
 }
 
 	return (x);
