@@ -30,9 +30,8 @@ if (x == NULL)
 for (i = 0; i < height; i++)
 {
 	x[i] = (int *)malloc(width * sizeof(int));
-
 }
-
+	x[width] = '\0';
 	return (x);
 }
 
