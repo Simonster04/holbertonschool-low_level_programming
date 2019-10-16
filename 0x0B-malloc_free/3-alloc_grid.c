@@ -20,7 +20,7 @@ if (height <= 0 || width <= 0)
 	return (NULL);
 }
 
-x = (int **)malloc(height * sizeof(int *));
+x = malloc(height * sizeof(int *));
 
 if (x == NULL)
 {
@@ -29,9 +29,12 @@ if (x == NULL)
 
 for (i = 0; i < height; i++)
 {
-	x[i] = (int *)malloc(width * sizeof(int));
+	x[i] = malloc(width * sizeof(int));
+	if (x[i] == NULL)
+	{
+		return (NULL);
+	}
 }
-	x[width] = '\0';
 	return (x);
 }
 
