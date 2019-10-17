@@ -13,6 +13,7 @@ int *array_range(int min, int max)
 {
 
 int *fifi = NULL;
+int i;
 
 if (min > max)
 {
@@ -26,7 +27,11 @@ if (fifi == NULL)
 	return (NULL);
 }
 
-fifi[max - min] = '\0';
+for (i = 0; i < 1 + (max - min); i++)
+{
+	fifi[i] = min + i;
+}
+
 
 return (fifi);
 
