@@ -19,13 +19,14 @@ if (min > max)
 	return (NULL);
 }
 
-fifi = malloc((max - min) * sizeof(int));
+fifi = malloc((max - min + 1) * sizeof(int));
 
 if (fifi == NULL)
 {
 	return (NULL);
 }
 
+fifi[max - min] = '\0';
 
 return (fifi);
 
