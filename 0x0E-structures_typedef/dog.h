@@ -1,3 +1,6 @@
+#ifndef DOG
+#define DOG
+
 /**
  * struct dog - capture data of a dog
  * @name: First member
@@ -12,3 +15,5 @@ struct dog
 	float age;
 	char *owner;
 };
+
+#endif
