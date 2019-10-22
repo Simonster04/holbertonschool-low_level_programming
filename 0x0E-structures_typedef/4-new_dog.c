@@ -25,6 +25,30 @@ dog_t *new_dog(char *name, float age, char *owner)
 	new_dog->age = age;
 	new_dog->owner = owner;
 
+	char *name_cp;
+
+        for (x = 0; name[x] != '\0'; x++)
+        {}
+
+	name_cp = malloc(x);
+
+        if (name_cp == NULL)
+        {
+                return (NULL);
+        }
+
+        char *owner_cp;
+
+        for (x = 0; name[x] != '\0'; x++)
+        {}
+
+        owner_cp = malloc(x);
+
+        if (owner_cp == NULL)
+        {
+                return (NULL);
+        }
+
 	return (new_dog);
 
 }
