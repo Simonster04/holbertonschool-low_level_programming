@@ -1,16 +1,21 @@
 #include <stdio.h>
 #include "dog.h"
+#include <stdlib.h>
 
 /**
- * main - check the code for Holberton School students.
+ * free_dog - frees dog.
+ * @d: dog to free
  *
- * Return: Always 0.
+ * Return: void.
  */
 
 void free_dog(dog_t *d)
 {
 
+	if (d)
+	{
 	free(d->name);
 	free(d->owner);
 	free(d);
+	}
 }

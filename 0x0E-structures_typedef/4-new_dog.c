@@ -3,17 +3,21 @@
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
+ * new_dog - creates a new dog.
+ * @name: variable
+ * @age: variable
+ * @owner: variable
  *
- * Return: Always 0.
+ * Return: memory allocation.
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
 
-	struct dog *new_dog = NULL;
+	struct dog *new_dog;
 
 	new_dog = malloc(sizeof(struct dog));
+
 	if (new_dog == NULL)
 	{
 	return (NULL);
