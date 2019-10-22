@@ -14,49 +14,41 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 
-        struct dog *new_dog;
-        unsigned int x;
+	struct dog *new_dog;
+	unsigned int x;
 
-        new_dog = malloc(sizeof(struct dog));
+	new_dog = malloc(sizeof(struct dog));
+	if (new_dog == NULL)
+	{
+		return (NULL);
+	}
+	new_dog->name = name;
+	new_dog->age = age;
+	new_dog->owner = owner;
+	char *name_cp;
 
-        if (new_dog == NULL)
-        {
-                return (NULL);
-        }
-
-        new_dog->name = name;
-        new_dog->age = age;
-        new_dog->owner = owner;
-
-        char *name_cp;
-
-        for (x = 0; name[x] != '\0'; x++)
-        {}
+	for (x = 0; name[x] != '\0'; x++)
+	{}
 
 	name_cp = malloc(x);
+	if (name_cp == NULL)
+	{
+	return (NULL);
+	}
+	char *owner_cp;
 
-        if (name_cp == NULL)
-        {
-                return (NULL);
-        }
+	for (x = 0; name[x] != '\0'; x++)
+	{}
 
-        char *owner_cp;
-
-        for (x = 0; name[x] != '\0'; x++)
-        {}
-
-        owner_cp = malloc(x);
-
-        if (owner_cp == NULL)
-        {
-                return (NULL);
-        }
-
-        free(owner_cp);
-        free(name_cp);
-        free(new_dog);
-
-        return (new_dog);
+	owner_cp = malloc(x);
+	if (owner_cp == NULL)
+	{
+	return (NULL);
+	}
+	free(owner_cp);
+	free(name_cp);
+	free(new_dog);
+	return (new_dog);
 
 }
 
