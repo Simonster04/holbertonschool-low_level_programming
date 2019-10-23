@@ -13,42 +13,37 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-
-	struct dog *new_dog;
-	unsigned int name_len, owner_len, i;
+	unsigned int nalen, owlen, cont;
+	dog_t *new_dog;
 
 	if (name == NULL || owner == NULL)
 		return (NULL);
-	new_dog = malloc(sizeof(struct dog));
+	new_dog = malloc(sizeof(dog_t));
 	if (new_dog == NULL)
-	{
 		return (NULL);
-	}
-	new_dog->age = age;
-	for (name_len = 0; name[name_len] != '\0'; name_len++)
-	{}
-	new_dog->name = malloc(name_len + 1);
+	for (nalen = 0; name[nalen]; nalen++)
+		;
+	nalen += 1;
+	new_dog->name = malloc(nalen);
 	if (new_dog->name == NULL)
 	{
 		free(new_dog);
 		return (NULL);
 	}
-	for (i = 0; i < name_len + 1; i++)
-	{
-		new_dog->name[i] = name[i];
-	}
-	for (owner_len = 0; owner[owner_len] != '\0'; owner_len++)
-	{}
-	new_dog->owner = malloc(owner_len + 1);
+	for (cont = 0; cont < nalen; cont++)
+		new_dog->name[cont] = name[cont];
+	new_dog->age = age;
+	for (owlen = 0; owner[owlen]; owlen++)
+		;
+	owlen += 1;
+	new_dog->owner = malloc(owlen);
 	if (new_dog->owner == NULL)
 	{
 		free(new_dog->name);
 		free(new_dog);
 		return (NULL);
 	}
-	for (i = 0; i < name_len + 1; i++)
-	{
-	new_dog->owner[i] = owner[i];
-	}
+	for (cont = 0; cont < owlen; cont++)
+		new_dog->owner[cont] = owner[cont];
 	return (new_dog);
 }
