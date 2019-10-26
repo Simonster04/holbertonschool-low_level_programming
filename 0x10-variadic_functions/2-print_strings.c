@@ -22,13 +22,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		temp = va_arg (valist, char*);
 
-		if (temp != '\0')
+		if (temp == NULL)
 		{
-			printf("%s", temp);
+			temp = "(nil)";
 		}
-		else {
-			printf("(nil)");
-		}
+		printf("%s", temp);
 		if (cont == (n - 1))
 		{
 			printf("\n");
