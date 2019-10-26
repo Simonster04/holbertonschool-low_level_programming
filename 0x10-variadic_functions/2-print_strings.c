@@ -15,12 +15,12 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	unsigned int cont;
 	va_list valist;
-	char * temp;
-	va_start (valist, n);
+	char *temp;
 
+	va_start(valist, n);
 	for (cont = 0; cont < n; cont++)
 	{
-		temp = va_arg (valist, char*);
+		temp = va_arg(valist, char*);
 
 		if (temp == NULL)
 		{
@@ -32,12 +32,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			printf("\n");
 		}
 		else if (separator != NULL)
-                {
-                        printf("%s", separator);
-                }
-		else {
+		{
+			printf("%s", separator);
+		}
+		else
+		{
 			continue;
 		}
 	}
-	va_end (valist);
+	va_end(valist);
 }

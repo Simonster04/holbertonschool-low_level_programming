@@ -14,19 +14,14 @@ void print_all(const char * const format, ...)
 	int i = 0, cont = 0;
 	va_list valist;
 
-	va_start (valist, format);
-
-
+	va_start(valist, format);
 	while (format[cont] != '\0')
 	{
 		cont++;
 	}
-
-
 	while (i < cont)
 	{
 		if (format[i] != '\0')
-		{
 			switch (format[i])
 			{
 			case 'c':
@@ -43,14 +38,11 @@ void print_all(const char * const format, ...)
 			break;
 			default:
 			break;
-			}
 		}
 		else
-		{
 			printf("(nil)");
-		}
-		if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f' || format[i] != 's')
-		&& i != (cont - 1))
+		if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f'
+		|| format[i] != 's') && i != (cont - 1))
 		{
 			printf(", ");
 		}

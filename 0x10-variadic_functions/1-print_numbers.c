@@ -3,7 +3,7 @@
 #include "variadic_functions.h"
 
 /**
- * print_number - prints numbers
+ * print_numbers - prints numbers
  * @separator: string to be printed between numbers
  * @n: amount of arguments.
  *
@@ -16,7 +16,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	va_list valist;
 
-	va_start (valist, n);
+	va_start(valist, n);
 
 	for (i = 0; i < n; i++)
 	{
@@ -36,5 +36,5 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		}
 	}
 
-	va_end (valist);
+	va_end(valist);
 }
