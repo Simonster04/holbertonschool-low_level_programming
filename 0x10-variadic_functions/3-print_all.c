@@ -18,7 +18,6 @@ void print_all(const char * const format, ...)
 	va_start(valist, format);
 	while (format[i] != '\0')
 	{
-		if (format[i] != '\0')
 			switch (format[i])
 			{
 			case 'c':
@@ -41,7 +40,7 @@ void print_all(const char * const format, ...)
 			break;
 			default:
 			break;
-		}
+			}
 		if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f'
 		|| format[i] == 's') && format[i + 1] != '\0')
 		{
