@@ -39,10 +39,8 @@ void print_all(const char * const format, ...)
 			default:
 			break;
 		}
-		else
-			printf("(nil)");
 		if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f'
-		|| format[i] != 's') && i != (cont - 1))
+		|| format[i] == 's') && i != (cont - 1))
 		{
 			printf(", ");
 		}
