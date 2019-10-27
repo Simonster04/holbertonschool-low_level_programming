@@ -13,6 +13,7 @@ void print_all(const char * const format, ...)
 {
 	int i = 0, cont = 0;
 	va_list valist;
+	char *str = NULL;
 
 	va_start(valist, format);
 	while (format[cont] != '\0')
@@ -34,7 +35,13 @@ void print_all(const char * const format, ...)
 			printf("%f", (float)va_arg(valist, double));
 			break;
 			case 's':
-			printf("%s", va_arg(valist, char *));
+			str = va_arg(valist, char *);
+				if (str == NULL)
+				{
+					printf("(nil)");
+					break;
+				}
+			printf("%s", str);
 			break;
 			default:
 			break;
