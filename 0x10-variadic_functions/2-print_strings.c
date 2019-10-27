@@ -24,14 +24,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 		if (temp == NULL)
 		{
-			temp = "(nil)";
+			printf("(nil)");
 		}
-		printf("%s", temp);
-		if (cont == (n - 1))
+		else
 		{
-			printf("\n");
+			printf("%s", temp);
 		}
-		else if (separator != NULL)
+		if (cont < (n - 1) && separator != NULL)
 		{
 			printf("%s", separator);
 		}
@@ -41,4 +40,5 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		}
 	}
 	va_end(valist);
+	printf("\n");
 }
