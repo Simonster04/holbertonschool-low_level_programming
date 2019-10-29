@@ -12,7 +12,7 @@ void print_number(int n)
 
 	int temp;
 
-	if (n > 0)
+	if (n >= 0)
 	{
 		temp = n;
 	}
