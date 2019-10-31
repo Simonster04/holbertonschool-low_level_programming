@@ -3,7 +3,7 @@
 
 /**
  * print_list - prints all the elements of a list_t list
- * @h: The list to be printed
+ * @h: The head of the list to be printed
  *
  * Return: Amount of nodes.
  */
