@@ -14,27 +14,26 @@ int _strlen(const char *s)
 {
 	int c = 0;
 
-	while (s[c])
+	while (s[c] != '\0')
 	{
 		c++;
 	}
-
 	return (c);
 }
 
 /**
- * add_node - adds a new node at the beginning of a list_t list.
+ * add_node_end - adds a new node at the end of a list_t list.
  * @head: head of the list
- * @str: a string to be copied
+ * @str: a string to be added
  * Return: address of new element.
  */
 
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
 
-	list_t *new_node;
+	list_t *new_node, *tmp;
 
-	if (head == NULL)
+	if (!str)
 	{
 		return (NULL);
 	}
@@ -47,13 +46,20 @@ list_t *add_node(list_t **head, const char *str)
 	}
 
 	new_node->str = strdup(str);
-	if (!new_node->str)
-	{
-		free (new_node);
-	}
 	new_node->len = _strlen(str);
-	new_node->next = *head;
-	*head = new_node;
+	new_node->next = NULL;
+
+	if (*head == NULL)
+	{
+		*head = new_node;
+	}
+	else
+	{
+		tmp = *head;
+		while (tmp->next)
+			tmp = tmp->next;
+		tmp->next = new_node;
+	}
 
 	return (new_node);
 }
