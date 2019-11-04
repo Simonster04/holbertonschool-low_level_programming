@@ -4,7 +4,8 @@
 
 /**
  * add_nodeint - adds a new node at the beginning of a listint_t list.
- *
+ * @head: header of the given list
+ * @n: int to copy in the new node
  * Return: Always 0.
  */
 
@@ -14,14 +15,14 @@ listint_t *add_nodeint(listint_t **head, const int n)
 
 	newnode = malloc(sizeof(listint_t));
 
-	if(!newnode)
+	if (!newnode)
 	{
-		return(NULL);
+		return (NULL);
 	}
 
 	newnode->n = n;
 	newnode->next = *head;
 	*head = newnode;
 
-	return(newnode);
+	return (newnode);
 }
