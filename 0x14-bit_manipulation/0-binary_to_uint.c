@@ -42,7 +42,7 @@ unsigned int binary_to_uint(const char *b)
 		len--;
 	}
 
-	return(dec_num);
+	return (dec_num);
 }
 
 /**
