@@ -23,7 +23,11 @@ int main(void)
     add_nodeint_end(&head, 1024);
     print_listint(head);
     reverse_listint(&head);
+<<<<<<< HEAD
     print_listint(head);
+=======
+    print_listint(head);    
+>>>>>>> 7327ddf46cccc083e22a6e399104d2be5413a3e3
     free_listint2(&head);
     return (0);
 }
