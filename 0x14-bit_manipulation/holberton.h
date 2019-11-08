@@ -1,6 +1,7 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 
+int get_endianness(void);
 int _pow_recursion(int x, int y);
 int _putchar(char c);
 unsigned int binary_to_uint(const char *b);
