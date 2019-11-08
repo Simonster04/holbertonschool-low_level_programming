@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * flip_bits - calculates the number of bits you need to flip to get the same num
+ * flip_bits - calculates the bits you need to flip to get the same num
  * @n: num 1
  * @m: num 2
  * Return: number of bits you would need to flip
