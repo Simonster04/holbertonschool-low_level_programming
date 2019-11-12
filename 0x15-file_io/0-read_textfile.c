@@ -6,9 +6,9 @@
 
 /**
  * read_textfile - reads a text file and prints it to the POSIX standard output
- *
- *
- *
+ * @filename: pointer to the text file
+ * @letters: amount of letters/bytes to print
+ * Return: actual number of letters it could read and print
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
@@ -36,17 +36,20 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	else
 	{
 		n_bytes = read(fd, buffer, letters);
-		a_bytes = write(STDOUT_FILENO, buffer, n_bytes);
-
-		if(n_bytes == 0)
+		if (n_bytes == -1)
 		{
 			free(buffer);
 			return (0);
 		}
-		else
+
+		a_bytes = write(STDOUT_FILENO, buffer, n_bytes);
+
+		if(a_bytes == -1)
 		{
-			return (n_bytes);
+			free(buffer);
+			return (0);
 		}
+
 	close(fd);
 	}
 
