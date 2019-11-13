@@ -34,18 +34,22 @@ int main(int argc, char **argv)
 		if (n_from == -1)
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
+
 		n_to = write(f_to, buffer, n_from);
-		if (n_to == -1)
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
+		if (n_to != n_from)
+			n_to = -1;
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
 	}
 	closer = close(f_from);
 	if (closer == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", closer);
 		exit(100);
+
 	closer = close(f_to);
 	if (closer == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", closer);
 		exit(100);
+
 	return (0);
 }
