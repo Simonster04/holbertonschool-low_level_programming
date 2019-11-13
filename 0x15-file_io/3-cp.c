@@ -14,7 +14,7 @@
 
 int main(int argc, char **argv)
 {
-	int f_from, f_to, closer;
+	int f_from, f_to;
 	char buffer[1024];
 	ssize_t n_from = 1024, n_to;
 	mode_t perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
@@ -42,12 +42,12 @@ int main(int argc, char **argv)
 				dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 				exit(99);
 	}
-	closer = close(f_from);
+	n_to = close(f_from);
 	if (closer == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", closer);
 		exit(100);
 
-	closer = close(f_to);
+	n_to = close(f_to);
 	if (closer == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", closer);
 		exit(100);
