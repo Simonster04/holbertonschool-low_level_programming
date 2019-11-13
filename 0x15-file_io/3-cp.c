@@ -43,13 +43,13 @@ int main(int argc, char **argv)
 				exit(99);
 	}
 	n_to = close(f_from);
-	if (closer == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", closer);
+	if (n_to == -1)
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f_from);
 		exit(100);
 
 	n_to = close(f_to);
-	if (closer == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", closer);
+	if (n_to == -1)
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f_to);
 		exit(100);
 
 	return (0);
