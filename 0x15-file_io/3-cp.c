@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 {
 	int f_from, f_to;
 	char buffer[1024];
-	ssize_t n_from = 1024, n_to;
+	ssize_t n_from = 1, n_to = 1;
 	mode_t perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 
 	if (argc != 3)
