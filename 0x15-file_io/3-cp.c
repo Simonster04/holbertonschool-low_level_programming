@@ -1,6 +1,7 @@
 #include <unistd.h>
 #include "holberton.h"
 #include <fcntl.h>
+#include <sys/stat.h>
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -16,6 +17,7 @@ int main(int argc, char **argv)
 	int f_from, f_to, closer;
 	char buffer[1024];
 	ssize_t n_from = 1024, n_to;
+	mode_t perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 
 	if (argc != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
@@ -24,7 +26,7 @@ int main(int argc, char **argv)
 	if (f_from == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
-	f_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	f_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, perm);
 	if (f_to == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
