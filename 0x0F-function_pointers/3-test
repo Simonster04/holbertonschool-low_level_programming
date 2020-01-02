@@ -1,0 +1,29 @@
+#include <stdio.h>
+int (*get_op_func(char *s))(int a, int b) {
+    
+    
+}
+/////////////////////////////////////////// int op_add(int a, int b) {return (a + b);} 
+/////////////////////////////////////////// int op_sub(int a, int b) {return (a - b);} 
+/////////////////////////////////////////// int op_mul(int a, int b) {return (a * b);} 
+/////////////////////////////////////////// int op_div(int a, int b) {return (a / b);} 
+/////////////////////////////////////////// int op_mod(int a, int b) {return (a % b);} 
+/////////////////////////////////////////// int main(int argc, char *argv[]) {
+    //declare function pointers
+ 
+  int(*f_add)(int, int);
+  int(*f_res)(int, int);
+  int(*f_mul)(int, int);
+  int(*f_div)(int, int);
+  int(*f_mod)(int, int);
+    //point ptr's to functions
+ 
+  f_add=&op_add;
+  f_res=&op_sub;
+  f_mul=&op_mul;
+  f_div=&op_div;
+  f_mod=&op_mod;
+  
+return (0);
+    
+}

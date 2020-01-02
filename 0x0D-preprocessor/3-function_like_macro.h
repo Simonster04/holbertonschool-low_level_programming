@@ -1,0 +1,5 @@
+#ifndef ABSVAL
+#define ABSVAL
+#define ABS(x) ((x < 0) ? (-(x)) : (x))
+
+#endif
