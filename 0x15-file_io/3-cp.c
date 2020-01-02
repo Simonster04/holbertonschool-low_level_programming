@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 	if (f_from == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
-	f_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, perm);
+	f_to = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, perm);
 	if (f_to == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
@@ -42,13 +42,11 @@ int main(int argc, char **argv)
 				dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 				exit(99);
 	}
-	n_to = close(f_from);
-	if (n_to == -1)
+	if (close(f_from) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f_from);
 		exit(100);
 
-	n_to = close(f_to);
-	if (n_to == -1)
+	if (close(f_to) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f_to);
 		exit(100);
 
