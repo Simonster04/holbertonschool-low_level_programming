@@ -22,21 +22,23 @@ int binary_helper(int *array, size_t first, size_t last, int val)
 
 	if (array[mid] == val)
 	{
-		if (array[mid] != array[mid - 1])
+		if (array[mid - 1] == val)
 		{
-			return (mid);
+			return (binary_helper(array, first, mid, val));
 		}
+		return (mid);
 	}
+
 	if (first == last)
 	{
 		return (-1);
 	}
 
-	if (array[mid] == val)
+	if (array[mid] > val)
 	{
 		return (binary_helper(array, first, mid - 1, val));
 	}
-	if (array[mid] <= val)
+	if (array[mid] < val)
 	{
 		return (binary_helper(array, mid + 1, last, val));
 	}
