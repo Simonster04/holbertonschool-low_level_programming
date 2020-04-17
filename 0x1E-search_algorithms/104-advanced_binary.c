@@ -23,7 +23,6 @@ int binary_helper(int *array, size_t first, size_t last, int val)
 		printf(" %i,", array[x]);
 	}
 	printf(" %i\n", array[x]);
-
 	if (array[mid] == val)
 	{
 		if (array[mid - 1] == val)
@@ -31,10 +30,6 @@ int binary_helper(int *array, size_t first, size_t last, int val)
 			return (binary_helper(array, first, mid, val));
 		}
 		return (mid);
-	}
-	if (first == last)
-	{
-		return (-1);
 	}
 	if (array[mid] > val)
 	{
@@ -59,7 +54,7 @@ int advanced_binary(int *array, size_t size, int value)
 {
 	int index;
 
-	if (!array || size < 1)
+	if (!array)
 	{
 		return (-1);
 	}
