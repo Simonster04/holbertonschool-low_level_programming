@@ -13,10 +13,6 @@ int binary_helper(int *array, size_t first, size_t last, int val)
 {
 	size_t mid = (first + last) / 2, x;
 
-	if (first > last)
-	{
-		return (-1);
-	}
 	printf("Searching in array:");
 	for (x = first; x < last; x++)
 	{
@@ -30,6 +26,10 @@ int binary_helper(int *array, size_t first, size_t last, int val)
 			return (binary_helper(array, first, mid, val));
 		}
 		return (mid);
+	}
+	if (first == last)
+	{
+		return (-1);
 	}
 	if (array[mid] > val)
 	{
@@ -54,7 +54,7 @@ int advanced_binary(int *array, size_t size, int value)
 {
 	int index;
 
-	if (array == NULL)
+	if (!array || size < 1)
 	{
 		return (-1);
 	}
