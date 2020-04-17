@@ -54,7 +54,7 @@ int advanced_binary(int *array, size_t size, int value)
 {
 	int index;
 
-	if (!array)
+	if (array == NULL)
 	{
 		return (-1);
 	}
