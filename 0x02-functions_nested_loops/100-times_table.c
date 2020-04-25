@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
  * print_times_table -  prints the last digit of a number
@@ -19,32 +18,32 @@ void print_times_table(int n)
 			{
 				if (j == 0)
 				{
-					putchar('0');
+					_putchar('0');
 				}
 				else if ((i * j) < 10)
 				{
-					putchar(' '), putchar(' ');
-					putchar((i * j) + '0');
+					_putchar(' '), _putchar(' ');
+					_putchar((i * j) + '0');
 				}
 				else if ((i * j) < 100)
 				{
-					putchar(' ');
-					putchar(((i * j) / 10) + '0');
-					putchar(((i * j) % 10) + '0');
+					_putchar(' ');
+					_putchar(((i * j) / 10) + '0');
+					_putchar(((i * j) % 10) + '0');
 				}
 				else
 				{
-				putchar(((i * j) / 100) + '0');
-				putchar((((i * j) % 100) / 10) + '0');
-				putchar(((i * j) % 10) + '0');
+					_putchar(((i * j) / 100) + '0');
+					_putchar((((i * j) % 100) / 10) + '0');
+					_putchar(((i * j) % 10) + '0');
 				}
 				if (j < n)
 				{
-					putchar(','), putchar(' ');
+					_putchar(','), _putchar(' ');
 				}
 				else
 				{
-					putchar('\n');
+					_putchar('\n');
 				}
 			}
 		}
