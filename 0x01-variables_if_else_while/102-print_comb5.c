@@ -12,38 +12,27 @@ int main(void)
 
 	while (i < 58)
 	{
-		putchar(i);
-		putchar(j);
-		putchar(' ');
-		putchar(h);
-		putchar(w);
+		putchar(i), putchar(j), putchar(' '), putchar(h), putchar(w);
 		if (i == 57 && j == 56 && h == 57 && w == 57)
 		{
-			putchar('\n');
-			i++;
+			putchar('\n'), i++;
 		}
 		else
 		{
-			putchar(',');
-			putchar(' ');
+			putchar(','), putchar(' ');
 			if (h == 57 && w == 57)
 			{
 				if (j < 56)
 				{
-					w = ++j + 1;
-					h = i;
+					w = ++j + 1, h = i;
 				}
 				else if (j == 56)
 				{
-					j++;
-					h = i + 1;
-					w = 48;
+					j++, h = i + 1,	w = 48;
 				}
 				else if (j == 57)
 				{
-					j = 48;
-					w = 49;
-					h = ++i;
+					j = 48, w = 49, h = ++i;
 				}
 			}
 			else if (w < 57)
@@ -52,10 +41,8 @@ int main(void)
 			}
 			else
 			{
-				w = 48;
-				h++;
+				w = 48,	h++;
 			}
-
 		}
 	}
 	return (0);
